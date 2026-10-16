@@ -20,7 +20,7 @@ a {
   color: var(--color-primary);
 }
 
-header {
+.site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,7 +46,7 @@ header {
   filter: brightness(0) invert(1);
 }
 
-nav {
+.menu {
   position: fixed;
   inset: 0;
   display: flex;
@@ -60,12 +60,12 @@ nav {
   transition: opacity 0.3s, visibility 0.3s;
 }
 
-nav.is-open {
+.menu.is-open {
   opacity: 1;
   visibility: visible;
 }
 
-nav a {
+.menu a {
   color: var(--color-text);
   font-size: 2rem;
   font-weight: 700;
@@ -132,7 +132,7 @@ footer {
     display: none;
   }
 
-  nav {
+  .menu {
     position: static;
     flex-direction: row;
     gap: 1.25rem;
@@ -141,7 +141,7 @@ footer {
     visibility: visible;
   }
 
-  nav a {
+  .menu a {
     color: white;
     font-size: 1rem;
   }
