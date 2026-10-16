@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>אתר אינטרנט</title>
+    <title>Hila</title>
     <link href="/styles/reset.css" rel="stylesheet" />
     <link href="/styles/main.css" rel="stylesheet" />
   </head>
   <body>
     <header class="site-header">
-      <a class="site-title" href="index.html">אתר אינטרנט</a>
+      <a class="logo" href="index.html">hila<span class="pink">.</span></a>
 
       <button class="menu-button">
         <img src="/icons/menu.svg" alt="" />
@@ -20,48 +20,34 @@
         <button class="close-button">
           <img src="/icons/close.svg" alt="" />
         </button>
-        <a href="index.html">דף הבית</a>
-        <a href="elements.html">אלמנטים</a>
-        <a href="https://github.com/product-jam-2027/course/">הקורס</a>
+        <a href="index.html">Home</a>
+        <a href="elements.html">Elements</a>
+        <a href="easter-egg.html">Easter egg</a>
       </nav>
     </header>
 
-    <main>
-      <h1>ברוכים הבאים לאתר האינטרנט שלי</h1>
+    <main class="content">
+      <section class="hero">
+        <div class="hero-text">
+          <p>Hello! I'm</p>
+          <h1 class="name">HILA</h1>
+        </div>
 
-      <p>
-        האינטרנט (ב<a href="https://he.wikipedia.org/wiki/עברית">עברית</a>:
-        מִרְשֶׁתֶת) הוא
-        <a href="https://he.wikipedia.org/wiki/רשת_תקשורת_נתונים">רשת תקשורת נתונים</a>
-        בהיקף כמעט כלל־עולמי שנוצרה כתוצאה מחיבורים רבים בין
-        <a href="https://he.wikipedia.org/wiki/רשת_מחשבים">רשתות מחשבים</a>
-        שאפשרו תקשורת בין מחשבים רבים ברשתות רבות.
-      </p>
+        <img class="memoji" src="/memoji/laptop.png" alt="" />
 
-      <p>
-        התשתית הרעיונית והמחקרית של האינטרנט נמצאת בתחילת שנות ה־60 במסגרת
-        מחקרים של
-        <a href="https://he.wikipedia.org/wiki/DARPA">הסוכנות הצבאית לפרויקטים מחקריים מתקדמים</a>
-        של
-        <a href="https://he.wikipedia.org/wiki/משרד_ההגנה_של_ארצות_הברית">משרד ההגנה האמריקאי</a>
-        (<a href="https://he.wikipedia.org/wiki/DARPA">ARPA</a>). תחילת פעילותו
-        של האינטרנט, כלומר הרשת המבצעית הראשונה
-        (<a href="https://he.wikipedia.org/wiki/ARPANET">ARPANET</a>), החלה
-        בסוף שנות ה־60, כאשר בשנת
-        <a href="https://he.wikipedia.org/wiki/1969">1969</a> נשלחה ההודעה
-        הראשונה בין שני מחשבים מחוברים. היקף רשת האינטרנט, כמות המידע העצומה
-        השמורה בשרתים והפעילות הרבה שמבוצעת באמצעות האינטרנט הפכו את האינטרנט
-        לגורם רב משמעות בהתפתחות הכלכלית, החברתית והתרבותית.
-      </p>
+        <div class="hero-text">
+          <p>I'm a</p>
+          <p class="role"><span class="pink">CS &amp; MATAR</span><br />STUDENT</p>
+        </div>
+      </section>
 
-      <div class="hello">
-        <label for="name-input">איך קוראים לך?</label>
-        <input id="name-input" placeholder="שם פרטי" />
-        <button>בבקשה ללחוץ על הכפתור</button>
+      <div class="intro">
+        <p>I built it in Product Jam.</p>
+        <a class="button" href="easter-egg.html">See something cool</a>
       </div>
     </main>
 
-    <footer>Product Jam 2027</footer>
+    <footer class="site-footer">Product Jam 2027</footer>
 
     <script type="module" src="/main.js"></script>
   </body>

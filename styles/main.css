@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Rubik:wght@400;700&display=swap");
 
 :root {
-  --color-primary: #4777b6;
-  --color-text: #333333;
-  --color-border: #bbbbbb;
-  --color-muted: #adadad;
-  --color-menu: #b7d1f3;
+  --color-pink: #e575a8;
+  --color-pink-light: #fbe9f1;
+  --color-text: #27232b;
+  --color-muted: #77717c;
+  --color-line: #e9e6eb;
+  --font-display: "Barlow Condensed", sans-serif;
 }
 
 body {
@@ -16,22 +17,29 @@ body {
   color: var(--color-text);
 }
 
-a {
-  color: var(--color-primary);
+a,
+.pink {
+  color: var(--color-pink);
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
 }
 
 .site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 6.25rem;
-  padding-inline: 2rem;
-  background-color: var(--color-primary);
+  padding: 1.5rem 2rem;
+  border-block-end: 1px solid var(--color-line);
 }
 
-.site-title {
-  color: white;
-  font-size: 2rem;
+.logo {
+  color: var(--color-text);
+  font-size: 1.5rem;
   font-weight: 700;
   text-decoration: none;
 }
@@ -42,10 +50,6 @@ a {
   background: none;
 }
 
-.menu-button img {
-  filter: brightness(0) invert(1);
-}
-
 .menu {
   position: fixed;
   inset: 0;
@@ -54,7 +58,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  background-color: var(--color-menu);
+  background-color: var(--color-pink-light);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
@@ -74,54 +78,110 @@ a {
 
 .close-button {
   position: absolute;
-  inset-block-start: 2.25rem;
+  inset-block-start: 1.75rem;
   inset-inline-end: 2rem;
 }
 
-main {
+.content {
   flex-grow: 1;
   width: 100%;
-  max-width: 42rem;
+  max-width: 72rem;
   margin-inline: auto;
-  padding: 1.5rem 2rem;
+  padding: 2rem;
 }
 
-h1 {
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1.2;
-}
-
-p {
-  margin-block-start: 1rem;
-}
-
-.hello {
+.hero {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-block-start: 3rem;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.25rem;
+  text-align: center;
 }
 
-.hello input,
-.hello button {
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.5rem;
+.name {
+  color: var(--color-pink);
+  font-size: 7rem;
 }
 
-.hello input {
-  border: 2px solid var(--color-border);
-}
-
-.hello button {
-  border: 0;
-  background-color: var(--color-primary);
-  color: white;
+.role {
+  font-family: var(--font-display);
+  font-size: 3rem;
   font-weight: 700;
+  line-height: 1.1;
 }
 
-footer {
+.memoji {
+  width: 14rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-block-start: 3rem;
+  color: var(--color-muted);
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--color-text);
+  color: white;
+  text-decoration: none;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin-block-start: 2.5rem;
+}
+
+.elements h1,
+.elements h2,
+.elements h3,
+.elements p,
+.elements ul,
+.elements ol,
+.elements dl,
+.elements blockquote,
+.elements table,
+.elements figure {
+  margin-block-end: 1rem;
+}
+
+.elements blockquote {
+  padding-inline-start: 1rem;
+  border-inline-start: 3px solid var(--color-pink);
+  color: var(--color-muted);
+}
+
+.elements table {
+  display: block;
+  overflow-x: auto;
+}
+
+.elements audio,
+.elements video,
+.elements input,
+.elements select,
+.elements textarea,
+.elements fieldset {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.elements th,
+.elements td {
+  padding: 0.5rem;
+  border: 1px solid var(--color-line);
+}
+
+.site-footer {
   padding: 1.5rem;
+  border-block-start: 1px solid var(--color-line);
   color: var(--color-muted);
   text-align: center;
 }
@@ -135,18 +195,25 @@ footer {
   .menu {
     position: static;
     flex-direction: row;
-    gap: 1.25rem;
     background: none;
     opacity: 1;
     visibility: visible;
   }
 
   .menu a {
-    color: white;
     font-size: 1rem;
   }
 
-  .hello {
-    width: 13.75rem;
+  .hero {
+    flex-direction: row;
+    text-align: start;
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .hero-text:last-child {
+    text-align: end;
   }
 }

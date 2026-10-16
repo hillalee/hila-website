@@ -9,10 +9,3 @@ menuButton.addEventListener("click", () => {
 closeButton.addEventListener("click", () => {
   menu.classList.remove("is-open");
 });
-
-const nameInput = document.querySelector("#name-input");
-const helloButton = document.querySelector(".hello button");
-
-helloButton.addEventListener("click", () => {
-  alert("שלום, " + nameInput.value + " :)");
-});

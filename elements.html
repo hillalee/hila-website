@@ -4,11 +4,29 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML Elements</title>
+    <title>Elements · Hila</title>
     <link href="/styles/reset.css" rel="stylesheet" />
     <link href="/styles/main.css" rel="stylesheet" />
   </head>
   <body>
+    <header class="site-header">
+      <a class="logo" href="index.html">hila<span class="pink">.</span></a>
+
+      <button class="menu-button">
+        <img src="/icons/menu.svg" alt="" />
+      </button>
+
+      <nav class="menu">
+        <button class="close-button">
+          <img src="/icons/close.svg" alt="" />
+        </button>
+        <a href="index.html">Home</a>
+        <a href="elements.html">Elements</a>
+        <a href="easter-egg.html">Easter egg</a>
+      </nav>
+    </header>
+
+    <div class="content elements">
     <header>
       <h1>HTML Elements</h1>
       <p>
@@ -622,5 +640,10 @@
         </form>
       </section>
     </main>
+    </div>
+
+    <footer class="site-footer">Product Jam 2027</footer>
+
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
