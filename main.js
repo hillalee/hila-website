@@ -1,1 +1,18 @@
-// Your JavaScript goes here
+const menu = document.querySelector("nav");
+const menuButton = document.querySelector(".menu-button");
+const closeButton = document.querySelector(".close-button");
+
+menuButton.addEventListener("click", () => {
+  menu.classList.add("is-open");
+});
+
+closeButton.addEventListener("click", () => {
+  menu.classList.remove("is-open");
+});
+
+const nameInput = document.querySelector("#name-input");
+const helloButton = document.querySelector(".hello button");
+
+helloButton.addEventListener("click", () => {
+  alert("שלום, " + nameInput.value + " :)");
+});
